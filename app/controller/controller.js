@@ -1,3 +1,4 @@
+const debug = require("debug")("Controller");
 const dataMapper = require("../model/dataMapper");
 
 const controller = {
@@ -7,6 +8,7 @@ const controller = {
     },
 
     async post(req,res,next){
+        debug("Ajout d'un film en BDD",req.body);
         const result = await dataMapper.addMovie(req.body.name);
         res.send(result);
     },

@@ -1,6 +1,7 @@
 const { query } = require("express");
 const APIError = require("../service/APIError");
 const client = require("./dataClient");
+const debug = require("debug")("Datamapper");
 
 const dataMapper = {
     async getMovies() {

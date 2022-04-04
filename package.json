@@ -1,7 +1,28 @@
 {
   "dependencies": {
+    "debug": "^4.3.4",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "pg": "^8.7.3"
-  }
+  },
+  "name": "myapi",
+  "description": "Les logs vont être à destination de deux publics différents :",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev":"DEBUG=Datamapper,APP,Controller node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Atome/Data-E07-Log-BNoClock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Atome/Data-E07-Log-BNoClock/issues"
+  },
+  "homepage": "https://github.com/O-clock-Atome/Data-E07-Log-BNoClock#readme"
 }

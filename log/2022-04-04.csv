@@ -12,3 +12,9 @@ Mon Apr 04 2022 14:07:19 GMT+0200 (heure d’été d’Europe centrale),/p%C3%AE
 14:34:58,/movie,error: la valeur d'une clé dupliquée rompt la contrainte unique « name_unique »
 14:46:30,/movie,ReferenceError: req is not defined
 14:46:55,undefined,Film déjà présent
+14:54:51,undefined,Film déjà présent
+14:55:12,undefined,Film déjà présent
+15:00:30,undefined,Film déjà présent
+15:00:54,undefined,Film déjà présent
+15:05:41,undefined,Film déjà présent
+15:16:29,undefined,Film déjà présent

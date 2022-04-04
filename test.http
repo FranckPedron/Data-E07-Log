@@ -14,3 +14,12 @@ content-type: application/json
 {
     "name": "Conan The Barbarian"
 }
+
+###
+
+POST http://localhost:3000/movie HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Metropolis"
+}
