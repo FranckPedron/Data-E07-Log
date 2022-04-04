@@ -18,6 +18,8 @@ Les logs les plus importants restant les logs des erreurs.
 Dans la majorité des cas, celles-ci seront enregistrées dans des fichiers physiques.
 Nous pourrons les récupérer via SSH.
 
+Pour afficher les logs dans le terminal, il y a des modules qui existent comme DEBUG.
+
 
 ## Tuto logs
 
