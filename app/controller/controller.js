@@ -1,15 +1,13 @@
-const controller = {
-    get(req,res,next){
-        const result = {
+const dataMapper = require("../model/dataMapper");
 
-        };
-        res.send(result);
+const controller = {
+    async get(req,res,next){
+        const results = await dataMapper.getMovies();
+        res.send(results);
     },
 
-    post(req,res,next){
-        const result = {
-
-        };
+    async post(req,res,next){
+        const result = await dataMapper.addMovie(req.body.name);
         res.send(result);
     },
 

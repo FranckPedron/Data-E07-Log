@@ -2,8 +2,10 @@ const { appendFile } = require('fs/promises');
 const path = require("path");
 
 class APIError extends Error{
-    constructor(){
-        super(); // super appelle le constructeur du parent
+    constructor(message,url,status = 500){
+        super(message); // super appelle le constructeur du parent
+        this.status = status;
+        this.url = url;
     }
 
     /**
@@ -11,18 +13,18 @@ class APIError extends Error{
      * @param {string} message d'erreur
      * @returns 
      */
-    static log(message){
-        return async (req,res,next)=>{
-            // Gestion de l'affichage de l'erreur dans la console - instantanéité
-            console.error(req.url,message,new Date());
+    async log(){
+        // Gestion de l'affichage de l'erreur dans la console - instantanéité
+        console.error(this.url,this.message,new Date());
 
-            // Gestion des fichiers de log - historique
-            const logPath = path.resolve(__dirname,`../../log/`);
-            const fileName = new Date().toISOString().split('T')[0]+'.csv';
-            const result = await appendFile(logPath+"/"+fileName, `${new Date()},${req.url},${message}`);
+        // Gestion des fichiers de log - historique
+        const logPath = path.resolve(__dirname,`../../log/`);
+        const fileName = new Date().toISOString().split('T')[0]+'.csv';
 
-            // Gestion du retour utilisateur - communication
-        }
+        /* converti notre data en un format avec heure et minute (trouvé sur stackoverflow) */
+
+
+        const result = await appendFile(logPath+"/"+fileName, `${new Date().toLocaleTimeString()},${this.url},${this.message}\n`);
     }
 };
 

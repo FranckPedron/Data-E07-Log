@@ -1,11 +1,16 @@
-GET http://localhost:3000/pîng HTTP/1.1
+GET http://localhost:3000/toto HTTP/1.1
 
 ###
 
-POST http://localhost:3000 HTTP/1.1
+# route pour récupérer tous les films
+
+GET http://localhost:3000/movie HTTP/1.1
+
+###
+
+POST http://localhost:3000/movie HTTP/1.1
 content-type: application/json
 
 {
-    "model": "movie",
     "name": "Conan The Barbarian"
 }
